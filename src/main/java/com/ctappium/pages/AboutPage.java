@@ -13,11 +13,11 @@ public class AboutPage extends BasePage{
 		// TODO Auto-generated constructor stub
 	}
 
-	public boolean verificarVersão() {
+	public boolean checkVersion() {
 		return super.existeTexto(versao);
 	}
 	
-	public void verificarAcessoTela() {
+	public void checkAboutScreen() {
 		 super.existeTexto(veja_o_curso_aqui);
 	}
 	

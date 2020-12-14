@@ -21,22 +21,22 @@ public class InformacoesSobreSteps {
 	
 	@E("clicar na opção about...")
 	public void clicar_na_opcao() {
-		generic.about = generic.menu.clicarOpcaoAbout();
+		generic.setAboutPage(generic.getMenuPage().clicarOpcaoAbout());
 	}
 	
 	@Quando("acessar a tela sobre, o usuário ler os dados")
 	public void acessar_a_tela_sobre_o_usuario_ler_os_dados() {
-		  generic.about.verificarAcessoTela();
+		  generic.getAboutPage().checkAboutScreen();
 	}
 
 	@Então("verificará todos os dados da tela sobre")
 	public void verificara_todos_os_dados_da_tela_sobre() {
-		assertTrue(generic.about.verificarVersão());
+		assertTrue(generic.getAboutPage().checkVersion());
 	}
 	
 	@After (value="@tela_sobre")
 	public void finalizarDriver() {
-		generic.driver.quit();
+		generic.getDriver().quit();
 	}
 
 }
