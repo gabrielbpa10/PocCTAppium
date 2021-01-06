@@ -3,10 +3,8 @@ package com.ctappium.steps;
 import static org.junit.Assert.assertTrue;
 
 import com.ctappium.pages.GenericPage;
-import com.ctappium.pages.AboutPage;
 
 import io.cucumber.java.After;
-import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;

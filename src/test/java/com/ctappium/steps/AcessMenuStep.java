@@ -3,8 +3,6 @@ package com.ctappium.steps;
 import com.ctappium.factory.FactoryDriver;
 import com.ctappium.pages.GenericPage;
 import com.ctappium.pages.MenuPage;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.en.Given;
 
 public class AcessMenuStep {

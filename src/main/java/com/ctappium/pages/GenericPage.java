@@ -1,7 +1,5 @@
 package com.ctappium.pages;
 
-import com.ctappium.factory.FactoryDriver;
-
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 

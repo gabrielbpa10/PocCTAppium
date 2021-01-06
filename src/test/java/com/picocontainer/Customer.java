@@ -7,7 +7,7 @@ public class Customer {
 	private String nomeAux;
 	
 	public Customer(String name) {
-		this.name = name;
+		this.setName(name);
 	}
 	
 	public void setNome(String nomeAux) {
@@ -24,6 +24,14 @@ public class Customer {
 	
 	public String getNomeAux() {
 		return this.nomeAux;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }
