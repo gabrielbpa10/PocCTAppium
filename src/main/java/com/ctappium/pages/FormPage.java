@@ -15,6 +15,8 @@ public class FormPage extends BasePage {
 	private By idButtonOk = By.id("android:id/button1");
 	private String textDate = "01/01/2000";
 	private String textSave = "SALVAR";
+	private String textSaveLong = "SALVAR DEMORADO";
+	private By textName = By.xpath("//*[contains(@text,'Nome: ')]");
 	
 	public FormPage(AndroidDriver<MobileElement> driver) {
 		super(driver);
@@ -62,5 +64,17 @@ public class FormPage extends BasePage {
 	
 	public void clickButtonSave() {
 		super.clickForText(textSave);
+	}
+	
+	public void clickButtonSaveLong() {
+		super.clickForText(textSaveLong);
+	}
+	
+	public void waitLabelNome() {
+		try {
+			super.encontrarElementoEsperaExplicita(textName, 30);
+		} catch (Exception e) {
+			System.out.println("Erro: Lengthy request!");
+		}
 	}
 }

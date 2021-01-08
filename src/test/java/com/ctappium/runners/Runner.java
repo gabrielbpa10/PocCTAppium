@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "C:\\Users\\Usuario\\eclipse-workspace\\PocCTAppium\\src\\test\\resources\\features\\Register-form.feature",
 		glue = "classpath:com.ctappium.steps",
-		tags = "",
+		tags = "@scenario_register_form_button_long",
 		plugin = {"pretty"/*,"html:target/relatorios/cenarios.html"*/}, //Modifica a forma de visão do console sobre os resultados
 		monochrome = true, //Tira desenhos especiais no console com os caracteres especiais
 		dryRun = false,

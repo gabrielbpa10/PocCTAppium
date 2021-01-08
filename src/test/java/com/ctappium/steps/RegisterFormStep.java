@@ -42,6 +42,12 @@ public class RegisterFormStep {
 	public void to_click_the_button_to_save() {
 		generic.getFormPage().clickButtonSave();
 	}
+	
+	@And("to click the long button to save")
+	public void to_click_the_long_button_to_save() {
+		generic.getFormPage().clickButtonSaveLong();
+		generic.getFormPage().waitLabelNome();
+	}
 
 	@Then("will go to provide the dates, saved")
 	public void will_go_to_provide_the_dates_saved() {
