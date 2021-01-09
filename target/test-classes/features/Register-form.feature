@@ -12,6 +12,7 @@ Feature: Register form
     Examples:
     |Name			|Console	 |Slider 	 |Date	|
     |Gabriel	|PS4		 	 |0.38		 |12		|
+    |Bruna		|PS4		 	 |0.38		 |12		|
     
   @scenario_register_form_button_long  
 	Scenario Outline: Register form to save other button (save time consuming)

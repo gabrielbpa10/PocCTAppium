@@ -77,4 +77,8 @@ public class FormPage extends BasePage {
 			System.out.println("Erro: Lengthy request!");
 		}
 	}
+	
+	public void screenShot(String nameImage) {
+		super.screenShot(nameImage);
+	}
 }

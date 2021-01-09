@@ -3,6 +3,7 @@ package com.ctappium.steps;
 import static org.junit.Assert.assertEquals;
 import com.ctappium.pages.GenericPage;
 import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -51,11 +52,14 @@ public class RegisterFormStep {
 
 	@Then("will go to provide the dates, saved")
 	public void will_go_to_provide_the_dates_saved() {
+		
+		generic.getFormPage().screenShot("RegisterForm");
 		assertEquals("Nome: Gabriel", "Nome: " + name);
 	}
 
 	@After (value="@tela_formulario")
 	public void quitDriver() {
+		
 		generic.getDriver().quit();
 	}
 }

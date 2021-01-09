@@ -1,14 +1,17 @@
 package com.ctappium.pages;
 
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -160,5 +163,13 @@ public class BasePage {
 	@SuppressWarnings("rawtypes")
 	private void tap(int x, int y) {
 		 new TouchAction (this.driver).tap(PointOption.point(x, y)).perform();
+	}
+	
+	protected void screenShot(String nameImage) {
+		File image = this.driver.getScreenshotAs(OutputType.FILE);
+		try{
+			FileUtils.copyFile(image, new File("target/screenshots/" + nameImage + ".png" ));
+		} catch (Exception e) {}
+			
 	}
 }
